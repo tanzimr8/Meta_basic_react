@@ -9,7 +9,7 @@ function App() {
   return (
     <>
       <Nav/>
-      <Promo/>
+      <Promo discount ="70%"/>
       <Intro1/>
       <Intro2/>
       <Intro3/>
