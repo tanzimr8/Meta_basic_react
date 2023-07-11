@@ -1,18 +1,69 @@
+import {useState,useRef} from "react";
 import './App.css';
 import Nav from './components/Nav';
-import Promo from './components/Promo';
-import Intro1 from './components/Intro1';
-import Intro2 from './components/Intro2';
-import Intro3 from './components/Intro3';
+// import Promo from './components/Promo';
+// import Intro1 from './components/Intro1';
+// import Intro2 from './components/Intro2';
+// import Intro3 from './components/Intro3';
 import Footer from './components/Footer';
 function App() {
+  const inputRef = useRef(null); 
+  const resultRef = useRef(null); 
+  const [result, setResult] = useState(0); 
+ 
+  function plus(e) { 
+    e.preventDefault(); 
+    setResult((result) => result + Number(inputRef.current.value)); 
+  }; 
+ 
+  function minus(e) { 
+  	// Add the code for the minus function 
+  };
+ 
+  function times(e) { 
+    // Add the code for the plus function 
+  }; 
+ 
+  function divide(e) { 
+    // Add the code for the divide function 
+  };
+ 
+  function resetInput(e) { 
+    // Add the code for the resetInput function 
+  }; 
+ 
+  function resetResult(e) { 
+  	// Add the code for the resetResult function 
+  }; 
   return (
     <>
       <Nav/>
-      <Promo discount ="70%"/>
+      {/* <Promo discount ="70%"/>
       <Intro1/>
       <Intro2/>
-      <Intro3/>
+      <Intro3/> */}
+      <div className="App"> 
+      <div> 
+        <h1>Simplest Working Calculator</h1> 
+      </div> 
+      <form> 
+        <p ref={resultRef}> 
+          {/* add the value of the current total */} 
+        </p> 
+        <input
+          pattern="[0-9]" 
+          ref={inputRef} 
+          type="number" 
+          placeholder="Type a number" 
+        /> 
+        <button onClick={plus}>add</button> 
+        <button onClick={minus}>subtract</button> 
+        {/* Add the multiply button */} 
+        {/* Add the divide button */} 
+        {/* Add the resetInput button */} 
+        {/* Add the resetResult button */} 
+      </form> 
+      </div>
       <Footer/>
     </>
     
