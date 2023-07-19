@@ -42,14 +42,21 @@ const TodoForm = (props)=>{
 const TodoLists = (props)=>{
 
     return(
+        <>
     <ul>
         {props.allTasks.map((task)=>{
             return(
             <li key={task.taskName}>{task.taskName} - <span><i>{task.taskDetails}</i></span></li>
         )})}
     </ul>
+    </>
     );
     
+}
+const EmptyMessage = ()=>{
+    return(
+        <h4>No Task Yet</h4>
+    );
 }
 const BasicTodo = ()=>{
     const [tasks,setTasks] = useState([]);
@@ -59,7 +66,8 @@ const BasicTodo = ()=>{
     return(
         <div className="box">
             <TodoForm addTask = {addTask}/>
-            <TodoLists allTasks = {tasks}/>
+            {tasks.length <1 ? <EmptyMessage/> : <TodoLists allTasks = {tasks}/>}
+            
         </div>
     )
 }
