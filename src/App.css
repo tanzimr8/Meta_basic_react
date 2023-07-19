@@ -41,3 +41,35 @@ button{
   padding: 15px 5px;
   margin: 10px 0;
 }
+button:disabled{
+  cursor: not-allowed!important;
+}
+.box{
+  /* width:50%; */
+  height: 400px;
+  padding: 50px;
+  border:1px solid blueviolet;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.box button{
+  width:50%
+}
+.todo-wrapper form {
+  border: 1px solid blueviolet;
+  padding: 40px;
+  background-color: #fff;
+}
+.todo-wrapper form label{
+  display: block;
+  font-weight: 700;
+}
+
+.todo-wrapper form input{
+  border: 2px solid blueviolet;
+  width:300px;
+  padding: 15px 5px;
+  margin: 10px 0;
+}
