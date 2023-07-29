@@ -11,8 +11,7 @@ function App() {
     <>
       {/* <RegistrationForm/> */}
       {/* <BasicTodo/> */}
-      <h1>Learn HOC</h1>
-      <HOC/>
+      {/* <HOC/> */}
       <RenderProps/>
     </>
   );
